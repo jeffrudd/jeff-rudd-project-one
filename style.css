@@ -67,6 +67,12 @@ h1 {
     line-height: 94.3px;
 }
 
+.hamburger {
+    position: absolute;
+    top: -1000px;
+    font-size: 2.5rem;
+}
+
 header nav li {
     float: left;
     width: 100px;
@@ -76,6 +82,7 @@ header nav li {
 .title {
     width: 50%;
     float: left;
+    padding-top: 180px;
 }
 
 .titleitem {
@@ -101,10 +108,25 @@ header nav li {
     background-color: #500801;
 }
 
+.about .wrapper {
+    padding: 50px 0;
+}
+
+.about h2 {
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
 .squarephoto {
     float: left;
     width: 300px;
+    height: 300px;
     padding: 25px;
+}
+
+.squarephoto img {
+    width: 100%;
+    height: 100%;
 }
 
 .abouttext {
@@ -166,28 +188,34 @@ p {
     background-color: #815600;
 }
 
+.blog h2 {
+    padding-left: 0;
+}
+
 .blog a {
     background-color: rgba(0,0,0,0.5);
     font-family: 'Petit Formal Script', cursive;
     font-size: 1.25rem;
     padding: 10px 20px;
+    margin-top: 20px;
+    display: inline-block;
 }
 
 .blogtext1 {
     width: 50%;
     float: left;
-    padding: 7.5% 7.5% 0 7.5%;
+    padding: 100px 75px 100px 75px;
 }
 
 .blogphoto1 {
     width: 50%;
-    float: left;
+    float: right;
 }
 
 .blogtext2 {
     width: 50%;
     float: left;
-    padding: 7.5% 7.5% 0 7.5%;
+    padding: 100px 75px 100px 75px;
 }
 
 .blogphoto2 {
@@ -223,6 +251,11 @@ p {
     padding: 0;
 }
 
+::-moz-placeholder {
+    color: white;
+    text-align: center;
+}
+
 [value="subscribe"] {
     background-color: rgba(0,0,0,0.5);
     color: white;
@@ -233,5 +266,191 @@ p {
 }
 
 [type="email"] {
-    
+    padding: 10px 20px;
 }
+
+/*footer styles*/
+
+footer {
+background-color: black;
+text-align: center;
+}
+
+@media (max-width: 1465px) {
+    .blogtext1 {
+    padding: 20px 10px 10px 10px;
+    }
+    .blogtext2 {
+    padding: 20px 10px 10px 10px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .blogtext1 {
+    padding: 20px 10px 10px 10px;
+    }
+    .blogtext2 {
+    padding: 20px 10px 10px 10px;
+    }
+}
+
+@media (max-width: 1040px) {
+    .blogtext1 {
+        float: none;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .blogtext2 {
+        float: none;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .blogphoto1 {
+        float: none;
+        width: 100%;
+    }
+
+    .blogphoto2 {
+        float: none;
+        width: 100%;
+    }
+
+    .blog p {
+        text-align: left;
+    }
+}
+
+@media (max-width: 900px) {
+
+/*Header Styles*/
+
+    header nav {
+        visibility: hidden;
+    }
+
+    .hamburger {
+        top: 10px;
+        right: 20px;
+    }
+
+    .title {
+        float: right;
+        padding-top: 10px;
+        width: 460px;
+    }
+
+    h1 {
+        width: 100%;
+        font-size: 3.0rem;
+    }
+
+    .titleitem {
+        float: none;
+        width: 60VH;
+    }
+
+    .socialicons {
+        top: -1000px;
+    }
+
+/*About Styles*/
+
+    .squarephoto {
+        width: 60VH;
+    }
+
+    .about .wrapper {
+        width: 100%;
+        margin-left: 20%;
+        text-align: center;
+        padding-bottom: 30px;
+        display: inline-block;
+    }
+
+/* Contact Styles */
+    .contact nav li {
+        float: left;
+        margin: 2% 4%;
+        padding-top: 20px;
+    }
+
+    .contact ul {
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 40px;
+        width: 360px;
+        display: inline-block;
+    }
+
+    .contact h3,
+    .contact h2 {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .contact nav,
+    .contactinfo {
+        width: 100%;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .newsletter {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    [value="subscribe"] {
+        margin: 15px 0;
+    }
+
+    ::-moz-placeholder {
+        color: darkslategray;
+    }
+}
+
+@media (max-width: 700px) {
+    .titleitem {
+        transform: translate(-100px);
+    }
+
+    /*About Styles*/
+
+    .about .wrapper {
+        margin: 5%;
+    }
+
+    .squarephoto {
+        transform: translate(-50px)
+    }
+
+    /*Gallery Styles*/
+
+    .midimg {
+        position: absolute;
+        top: -1000px;
+    }
+
+    .gallery li {
+        width: 48%;
+    }
+
+    .catalogue,
+    .events,
+    .collaborations {
+        text-align: center;
+        width: 85%;
+        font-size: 1.45rem;
+        float: none;     
+        margin: 1%;
+        padding: 10px;
+        display: inline-block;
+    }    
+}
+
+
+
